@@ -1,19 +1,25 @@
-﻿int n1, n2, n3, n4, n5, n6, n7, n8, n9,round, turn,player_score,computer_score;
+int n1, n2, n3, n4, n5, n6, n7, n8, n9,round,turn,player_score,computer_score;
 
-n1 = 1; n2 = 2; n3 = 3; n4 = 4; n5 = 5; n6 = 6; n7 = 7; n8 = 8; n9 = 9;
-
-Random xxv = new Random();
-n1 = xxv.Next(1, 10);
-n2 = xxv.Next(1, 10-n1);
-n3 = xxv.Next(1,10-n1-n2);
-n4 = xxv.Next(1,10-n1-n2-n3);
-n5 = xxv.Next(1,10-n1-n2-n3-n4);
-n6 = xxv.Next(1, 10 - n1 - n2 - n3 - n4 - n5);
-
-
-
-
-
+Console.WriteLine("Welcome to our game :D ");
+Console.WriteLine();
+Console.WriteLine("Choose a number between 1 to 9 without repetation!");
+n1 = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine("Choose a number between 1 to 9 without repetation!");
+n2 = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine("Choose a number between 1 to 9 without repetation!");
+n3 = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine("Choose a number between 1 to 9 without repetation!");
+n4 = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine("Choose a number between 1 to 9 without repetation!");
+n5 = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine("Choose a number between 1 to 9 without repetation!");
+n6 = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine("Choose a number between 1 to 9 without repetation!");
+n7 = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine("Choose a number between 1 to 9 without repetation!");
+n8 = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine("Choose a number between 1 to 9 without repetation!");
+n9 = Convert.ToInt16(Console.ReadLine());
 
 
 turn = 1;
@@ -26,7 +32,7 @@ Console.WriteLine("             |------Round "+round+"------|");
 Console.WriteLine();
 Console.WriteLine("             #####################");
 Console.WriteLine("             ##                 ##");
-Console.WriteLine("             ##   " + n1 + "    " + n2 + "    " + n3 + "   ##      Turn:    "+turn+"    /    Player");
+Console.WriteLine("             ##   " + n1 + "    " + n2 + "    " + n3 + "   ##      Turn:     "+turn+"    /    Player");
 Console.WriteLine("             ##                 ##");
 Console.WriteLine("             ##   " + n4 + "    " + n5 + "    " + n6 + "   ##      Player Score   : "+player_score);
 Console.WriteLine("             ##                 ##");
@@ -35,3 +41,4 @@ Console.WriteLine("             ##                 ##");
 Console.WriteLine("             #####################");
 
 Console.ReadLine();
+
