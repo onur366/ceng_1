@@ -1,4 +1,4 @@
-int n1, n2, n3, n4, n5, n6, n7, n8, n9,round,turnnn,turn_number,player_score, computer_score, temp1, temp2, temp3, temp4, temp5, temp6;
+int n1, n2, n3, n4, n5, n6, n7, n8, n9, round, turnnn, turn_number, player_score, computer_score, temp;
 string turn = "Player"; turn_number = 1; round = 1; computer_score = 0; player_score = 0; turnnn = 0;
 
 Console.WriteLine("Welcome to our game :d "); Console.WriteLine();
@@ -63,7 +63,7 @@ while (apple)
     if (hamle_numarası == 1)
     {
 
-        temp1 = n1; n1 = n3; n3 = n2; n2 = temp1;
+        temp = n1; n1 = n3; n3 = n2; n2 = temp;
         turn_number = turn_number + 1;
         if (turnnn % 2 == 0)
             turn = "Computer";
@@ -87,7 +87,7 @@ while (apple)
     }
     else if (hamle_numarası == 2)
     {
-        temp2 = n4; n4 = n6; n6 = n5; n5 = temp2;
+        temp = n4; n4 = n6; n6 = n5; n5 = temp;
         turn_number = turn_number + 1;
         if (turnnn % 2 == 0)
             turn = "Computer";
@@ -113,7 +113,7 @@ while (apple)
 
     else if (hamle_numarası == 3)
     {
-        temp3 = n7; n7 = n9; n9 = n8; n8 = temp3;
+        temp = n7; n7 = n9; n9 = n8; n8 = temp;
         turn_number = turn_number + 1;
         if (turnnn % 2 == 0)
             turn = "Computer";
@@ -138,7 +138,7 @@ while (apple)
 
     else if (hamle_numarası == 4)
     {
-        temp4 = n1; n1 = n7; n7 = n4; n4 = temp4;
+        temp = n1; n1 = n7; n7 = n4; n4 = temp;
         turn_number = turn_number + 1;
         if (turnnn % 2 == 0)
             turn = "Computer";
@@ -162,7 +162,7 @@ while (apple)
     }
     else if (hamle_numarası == 5)
     {
-        temp5 = n2; n2 = n8; n8 = n5; n5 = temp5;
+        temp = n2; n2 = n8; n8 = n5; n5 = temp;
         turn_number = turn_number + 1;
         if (turnnn % 2 == 0)
             turn = "Computer";
@@ -188,7 +188,7 @@ while (apple)
 
     else if (hamle_numarası == 6)
     {
-        temp6 = n3; n3 = n9; n9 = n6; n6 = temp6;
+        temp = n3; n3 = n9; n9 = n6; n6 = temp;
         turn_number = turn_number + 1;
         if (turnnn % 2 == 0)
             turn = "Computer";
