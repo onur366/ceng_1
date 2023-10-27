@@ -1,46 +1,29 @@
 int n1, n2, n3, n4, n5, n6, n7, n8, n9, round, turnnn, turn_number, player_score, computer_score, temp;
 string turn = "Player"; turn_number = 1; round = 1; computer_score = 0; player_score = 0; turnnn = 0;
 
-Console.WriteLine("Welcome to our game :d "); Console.WriteLine();
 
-Console.WriteLine("Choose a number between 1 to 9 without repetation!");
-n1 = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Your first number is "+ n1); Console.WriteLine(); Console.WriteLine();
+Console.WriteLine("             Welcome to our game :d "); Console.WriteLine(); Console.WriteLine("                 CREATE  BOARD");
+Console.WriteLine("             #####################");
+Console.WriteLine("             ##                 ##");
+Console.WriteLine("             ##                 ##");
+Console.WriteLine("             ##                 ##");
+Console.WriteLine("             ##                 ##");
+Console.WriteLine("             ##                 ##");
+Console.WriteLine("             ##                 ##");
+Console.WriteLine("             ##                 ##");
+Console.WriteLine("             #####################");
 
-Console.WriteLine("Choose a number between 1 to 9 without repetation!");
-n2 = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Your second number is " + n2); Console.WriteLine(); Console.WriteLine();
+Console.SetCursorPosition(18, 5); n1 = Convert.ToInt16(Console.ReadLine()); 
+Console.SetCursorPosition(23, 5); n2 = Convert.ToInt16(Console.ReadLine());
+Console.SetCursorPosition(28, 5); n3 = Convert.ToInt16(Console.ReadLine());
+Console.SetCursorPosition(18, 7); n4 = Convert.ToInt16(Console.ReadLine());
+Console.SetCursorPosition(23, 7); n5 = Convert.ToInt16(Console.ReadLine());
+Console.SetCursorPosition(28, 7); n6 = Convert.ToInt16(Console.ReadLine());
+Console.SetCursorPosition(18, 9); n7 = Convert.ToInt16(Console.ReadLine());
+Console.SetCursorPosition(23, 9); n8 = Convert.ToInt16(Console.ReadLine());
+Console.SetCursorPosition(28, 9); n9 = Convert.ToInt16(Console.ReadLine());
 
-Console.WriteLine("Choose a number between 1 to 9 without repetation!");
-n3 = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Your third number is " + n3); Console.WriteLine(); Console.WriteLine();
-
-Console.WriteLine("Choose a number between 1 to 9 without repetation!");
-n4 = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Your fourth number is " + n4); Console.WriteLine(); Console.WriteLine();
-
-Console.WriteLine("Choose a number between 1 to 9 without repetation!");
-n5 = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Your fifth number is " + n5); Console.WriteLine(); Console.WriteLine();
-
-Console.WriteLine("Choose a number between 1 to 9 without repetation!");
-n6 = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Your sixth number is " + n6); Console.WriteLine(); Console.WriteLine();
-
-Console.WriteLine("Choose a number between 1 to 9 without repetation!");
-n7 = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Your seventh number is " + n7); Console.WriteLine(); Console.WriteLine();
-
-Console.WriteLine("Choose a number between 1 to 9 without repetation!");
-n8 = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Your eighth number is " + n8); Console.WriteLine(); Console.WriteLine();
-
-Console.WriteLine("Choose a number between 1 to 9 without repetation!");
-n9 = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Your nineth number is " + n9); Console.WriteLine(); Console.WriteLine();
-
-Console.WriteLine();
-Console.WriteLine();
+Console.SetCursorPosition(10,15);Console.WriteLine();
 Console.WriteLine("             |------Round "+round+"------|");
 Console.WriteLine();
 Console.WriteLine("             #####################");
@@ -56,11 +39,10 @@ Console.WriteLine("             #####################");
 bool apple = true;
 while (apple)
 {
-    int hamle_numarası;
-    Console.WriteLine("Please choose a move from 1 to 6");
-    hamle_numarası = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine(); Console.WriteLine("Please choose a move from 1 to 6");
+    string hamle_numarası = Convert.ToString(Console.ReadLine());
 
-    if (hamle_numarası == 1)
+    if (hamle_numarası == "1")
     {
 
         temp = n1; n1 = n3; n3 = n2; n2 = temp;
@@ -70,7 +52,7 @@ while (apple)
         else if (turnnn % 2 == 1)
             turn = "Player";
         turnnn = turnnn + 1;
-
+      
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("             |------Round " + round + "------|");
@@ -85,7 +67,7 @@ while (apple)
         Console.WriteLine("             ##                 ##");
         Console.WriteLine("             #####################");
     }
-    else if (hamle_numarası == 2)
+    else if (hamle_numarası == "2")
     {
         temp = n4; n4 = n6; n6 = n5; n5 = temp;
         turn_number = turn_number + 1;
@@ -94,7 +76,7 @@ while (apple)
         else if (turnnn % 2 == 1)
             turn = "Player";
         turnnn = turnnn + 1;
-
+        
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("             |------Round " + round + "------|");
@@ -111,7 +93,7 @@ while (apple)
     }
 
 
-    else if (hamle_numarası == 3)
+    else if (hamle_numarası == "3")
     {
         temp = n7; n7 = n9; n9 = n8; n8 = temp;
         turn_number = turn_number + 1;
@@ -120,7 +102,7 @@ while (apple)
         else if (turnnn % 2 == 1)
             turn = "Player";
         turnnn = turnnn + 1;
-
+       
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("             |------Round " + round + "------|");
@@ -136,7 +118,7 @@ while (apple)
         Console.WriteLine("             #####################");
     }
 
-    else if (hamle_numarası == 4)
+    else if (hamle_numarası == "4")
     {
         temp = n1; n1 = n7; n7 = n4; n4 = temp;
         turn_number = turn_number + 1;
@@ -145,7 +127,7 @@ while (apple)
         else if (turnnn % 2 == 1)
             turn = "Player";
         turnnn = turnnn + 1;
-
+      
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("             |------Round " + round + "------|");
@@ -160,7 +142,7 @@ while (apple)
         Console.WriteLine("             ##                 ##");
         Console.WriteLine("             #####################");
     }
-    else if (hamle_numarası == 5)
+    else if (hamle_numarası == "5")
     {
         temp = n2; n2 = n8; n8 = n5; n5 = temp;
         turn_number = turn_number + 1;
@@ -169,8 +151,7 @@ while (apple)
         else if (turnnn % 2 == 1)
             turn = "Player";
         turnnn = turnnn + 1;
-
-
+      
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("             |------Round " + round + "------|");
@@ -186,7 +167,7 @@ while (apple)
         Console.WriteLine("             #####################");
     }
 
-    else if (hamle_numarası == 6)
+    else if (hamle_numarası == "6")
     {
         temp = n3; n3 = n9; n9 = n6; n6 = temp;
         turn_number = turn_number + 1;
@@ -195,7 +176,7 @@ while (apple)
         else if (turnnn % 2 == 1)
             turn = "Player";
         turnnn = turnnn + 1;
-
+   
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("             |------Round " + round + "------|");
