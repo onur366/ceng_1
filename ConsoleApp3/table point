@@ -103,7 +103,7 @@ else can_earn_point = false;
 
 while (round < 6)
 {
-    if (can_earn_point)
+    
     {
         Console.WriteLine(); Console.WriteLine("Please choose a move from 1 to 6");
         string hamle_numarası = Convert.ToString(Console.ReadLine());
