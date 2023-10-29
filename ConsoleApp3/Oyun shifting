@@ -75,8 +75,7 @@ bool x6 = ((n3 + 2 == n6 + 1 && n6 + 1 == n9) | (n3 - 2 == n6 - 1 && n6 - 1 == n
 bool x7 = ((n1 + 2 == n5 + 1 && n5 + 1 == n9) | (n1 - 2 == n5 - 1 && n5 - 1 == n9));
 bool x8 = ((n3 + 2 == n5 + 1 && n5 + 1 == n7) | (n3 - 2 == n5 - 1 && n5 - 1 == n7));
 
-points = 0;
-board_score = 0;
+points = 0; board_score = 0;
 
 if (x1) points = points + 1;
 if (x2) points = points + 1;
@@ -153,7 +152,6 @@ while (round < 6)
             if (kimin_sırası % 2 == 0) turn = "Player";
             else turn = "Computer";
             temp = n7; n7 = n9; n9 = n8; n8 = temp;
-
         }
         else if (hamle_numarası == "4")
         {
@@ -194,8 +192,7 @@ while (round < 6)
             x7 = ((n1 + 2 == n5 + 1 && n5 + 1 == n9) | (n1 - 2 == n5 - 1 && n5 - 1 == n9));
             x8 = ((n3 + 2 == n5 + 1 && n5 + 1 == n7) | (n3 - 2 == n5 - 1 && n5 - 1 == n7));
 
-            points = 0;
-            board_score = 0;
+            points = 0; board_score = 0;
             {
                 if (x1) points = points + 1;
                 if (x2) points = points + 1;
@@ -209,13 +206,11 @@ while (round < 6)
             board_score = (points * points);
         }
         {
-
             if ((board_score > 0) && (can_score == 0))
             {
                 if (kimin_sırası % 2 == 1) kimin_sırası = kimin_sırası + 1;
                 if (kimin_sırası % 2 == 0) turn = "Player";
                 else turn = "Computer";
-
                 turn_number = 0;
 
                 Console.WriteLine();
@@ -233,7 +228,6 @@ while (round < 6)
                 Console.WriteLine("             #####################");
 
                 Random random = new Random();
-
                 n1 = random.Next(1, 10);
                 do
                     n2 = random.Next(1, 10);
@@ -263,10 +257,8 @@ while (round < 6)
                 if (kim_puan_aldı % 2 == 1) whowon = "Player";
                 else whowon = "Computer";
 
-                if (kim_puan_aldı % 2 == 1)
-                    player_score = (player_score + board_score);
-                else
-                    computer_score = (computer_score + board_score);
+                if (kim_puan_aldı % 2 == 1) player_score = (player_score + board_score);
+                else computer_score = (computer_score + board_score);
 
                 Thread.Sleep(1000);
                 Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
@@ -308,7 +300,6 @@ while (round < 6)
     }
     else
     {
-
     }
 }
 Console.WriteLine();
@@ -319,10 +310,7 @@ Console.WriteLine("               Computer's Point : " + computer_score); Consol
 Console.WriteLine("              ++++++++++++++++++++++"); Console.WriteLine();
 Console.WriteLine("-----------------------------------------------------------------"); Console.WriteLine();
 {
-    if (computer_score > player_score)
-        Console.WriteLine("                      Computer WON");
-    else if (computer_score < player_score)
-        Console.WriteLine("                      Player WON");
-    else
-        Console.WriteLine("                      ENDED DRAW"); Console.WriteLine(""); Console.WriteLine();
+    if (computer_score > player_score) Console.WriteLine("                      Computer WON");
+    else if (computer_score < player_score) Console.WriteLine("                      Player WON");
+    else Console.WriteLine("                      ENDED DRAW"); Console.WriteLine(""); Console.WriteLine();
 }
