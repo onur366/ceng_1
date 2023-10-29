@@ -2,7 +2,7 @@ int n1, n2, n3, n4, n5, n6, n7, n8, n9, round, turn_number, player_score, comput
 turn_number = 0; round = 1; computer_score = 0; player_score = 0; int points = 0; int board_score = 0; int kimin_sırası = 0; int kim_puan_aldı = 0;
 int temp_for_board_reading_int; int Value = 0; n1 = 0; n2 = 0; n3 = 0; n4 = 0; n5 = 0; n6 = 0; n7 = 0; n8 = 0; n9 = 0;
 
-Console.WriteLine(); Console.WriteLine("             Welcome to my game :dd "); Console.WriteLine(); Console.WriteLine("                 CREATE  BOARD");
+Console.WriteLine(); Console.WriteLine("             Welcome to my game :dd "); Console.WriteLine(); Console.WriteLine("                 CREATE  BOARD"); 
 Console.WriteLine("             #####################");
 Console.WriteLine("             ##                 ##");
 Console.WriteLine("             ##                 ##");
