@@ -73,9 +73,7 @@ bool x4 = ((n1 + 2 == n4 + 1 && n4 + 1 == n7) | (n1 - 2 == n4 - 1 && n4 - 1 == n
 bool x5 = ((n2 + 2 == n5 + 1 && n5 + 1 == n8) | (n2 - 2 == n5 - 1 && n5 - 1 == n8));
 bool x6 = ((n3 + 2 == n6 + 1 && n6 + 1 == n9) | (n3 - 2 == n6 - 1 && n6 - 1 == n9));
 bool x7 = ((n1 + 2 == n5 + 1 && n5 + 1 == n9) | (n1 - 2 == n5 - 1 && n5 - 1 == n9));
-bool x8 = ((n3 + 2 == n5 + 1 && n5 + 1 == n7) | (n3 - 2 == n5 - 1 && n5 - 1 == n7));
-
-points = 0; board_score = 0;
+bool x8 = ((n3 + 2 == n5 + 1 && n5 + 1 == n7) | (n3 - 2 == n5 - 1 && n5 - 1 == n7)); points = 0; board_score = 0;
 
 if (x1) points = points + 1;
 if (x2) points = points + 1;
@@ -84,7 +82,7 @@ if (x4) points = points + 1;
 if (x5) points = points + 1;
 if (x6) points = points + 1;
 if (x7) points = points + 1;
-if (x8) points = points + 1;
+if (x8) points = points + 1; board_score = (points * points); int can_score = board_score;
 
 Console.WriteLine(); Console.WriteLine();
 Console.WriteLine("-----------------------------------------------------------------------------");
@@ -102,8 +100,6 @@ Console.WriteLine("             ##                 ##");
 Console.WriteLine("             #####################");
 Console.WriteLine("                Board score : " + board_score);
 
-board_score = (points * points);
-int can_score = board_score;
 while (round < 6)
 {
     {
@@ -192,8 +188,7 @@ while (round < 6)
             x7 = ((n1 + 2 == n5 + 1 && n5 + 1 == n9) | (n1 - 2 == n5 - 1 && n5 - 1 == n9));
             x8 = ((n3 + 2 == n5 + 1 && n5 + 1 == n7) | (n3 - 2 == n5 - 1 && n5 - 1 == n7));
 
-            points = 0; board_score = 0;
-            {
+            points = 0; board_score = 0;           
                 if (x1) points = points + 1;
                 if (x2) points = points + 1;
                 if (x3) points = points + 1;
@@ -201,9 +196,7 @@ while (round < 6)
                 if (x5) points = points + 1;
                 if (x6) points = points + 1;
                 if (x7) points = points + 1;
-                if (x8) points = points + 1;
-            }
-            board_score = (points * points);
+                if (x8) points = points + 1; board_score = (points * points);
         }
         {
             if ((board_score > 0) && (can_score == 0))
@@ -228,30 +221,23 @@ while (round < 6)
                 Console.WriteLine("             #####################");
 
                 Random random = new Random();
+
                 n1 = random.Next(1, 10);
-                do
-                    n2 = random.Next(1, 10);
+                do n2 = random.Next(1, 10);
                 while (n1 == n2);
-                do
-                    n3 = random.Next(1, 10);
+                do n3 = random.Next(1, 10);
                 while (n1 == n3 | n2 == n3);
-                do
-                    n4 = random.Next(1, 10);
+                do n4 = random.Next(1, 10);
                 while (n1 == n4 | n2 == n4 | n3 == n4);
-                do
-                    n5 = random.Next(1, 10);
+                do n5 = random.Next(1, 10);
                 while (n1 == n5 | n2 == n5 | n3 == n5 | n4 == n5);
-                do
-                    n6 = random.Next(1, 10);
+                do n6 = random.Next(1, 10);
                 while (n1 == n6 | n2 == n6 | n3 == n6 | n4 == n6 | n5 == n6);
-                do
-                    n7 = random.Next(1, 10);
+                do n7 = random.Next(1, 10);
                 while (n1 == n7 | n2 == n7 | n3 == n7 | n4 == n7 | n5 == n7 | n6 == n7);
-                do
-                    n8 = random.Next(1, 10);
+                do n8 = random.Next(1, 10);
                 while (n1 == n8 | n2 == n8 | n3 == n8 | n4 == n8 | n5 == n8 | n6 == n8 | n7 == n8);
-                do
-                    n9 = random.Next(1, 10);
+                do n9 = random.Next(1, 10);
                 while (n1 == n9 | n2 == n9 | n3 == n9 | n4 == n9 | n5 == n9 | n6 == n9 | n7 == n9 | n8 == n9);
 
                 if (kim_puan_aldı % 2 == 1) whowon = "Player";
@@ -282,7 +268,7 @@ while (round < 6)
                 board_score = 0;
                 round = round + 1;
                 kim_puan_aldı = 0;
-                {
+                
                     if (x1) points = points + 1;
                     if (x2) points = points + 1;
                     if (x3) points = points + 1;
@@ -290,10 +276,7 @@ while (round < 6)
                     if (x5) points = points + 1;
                     if (x6) points = points + 1;
                     if (x7) points = points + 1;
-                    if (x8) points = points + 1;
-                }
-                board_score = (points * points);
-                can_score = board_score;
+                    if (x8) points = points + 1; board_score = (points * points); can_score = board_score;
             }
             else Console.WriteLine();
         }
