@@ -2,7 +2,7 @@ int n1, n2, n3, n4, n5, n6, n7, n8, n9, round, turn_number, player_score, comput
 turn_number = 0; round = 1; computer_score = 0; player_score = 0; int points = 0; int board_score = 0; int kimin_sırası = 0; int kim_puan_aldı = 0;
 int temp_for_board_reading_int; int Value = 0; n1 = 0; n2 = 0; n3 = 0; n4 = 0; n5 = 0; n6 = 0; n7 = 0; n8 = 0; n9 = 0;
 
-Console.WriteLine(); Console.WriteLine("             Welcome to my game :dd "); Console.WriteLine(); Console.WriteLine("                 CREATE  BOARD"); 
+Console.WriteLine(); Console.WriteLine("             Welcome to my game :dd "); Console.WriteLine(); Console.WriteLine("                 CREATE  BOARD");
 Console.WriteLine("             #####################");
 Console.WriteLine("             ##                 ##");
 Console.WriteLine("             ##                 ##");
@@ -102,7 +102,6 @@ Console.WriteLine("                Board score : " + board_score);
 
 while (round < 6)
 {
-    {
         turn_number = turn_number + 1;
         Console.WriteLine(); Console.WriteLine();
         Console.WriteLine("-----------------------------------------------------------------------------");
@@ -119,65 +118,27 @@ while (round < 6)
         Console.WriteLine("             ##                 ##");
         Console.WriteLine("             #####################");
         Console.WriteLine("                Board score : " + board_score);
-    }
     if (true)
     {
         Console.WriteLine(); Console.WriteLine("Please choose a move from 1 to 6");
         var hamle_numarası = (Console.ReadLine());
 
-        if (hamle_numarası == "1")
-        {
-            can_score = board_score;
-            kimin_sırası = kimin_sırası + 1; kim_puan_aldı = kim_puan_aldı + 1;
-            if (kimin_sırası % 2 == 0) turn = "Player";
-            else turn = "Computer";
-            temp = n1; n1 = n3; n3 = n2; n2 = temp;
-        }
-        else if (hamle_numarası == "2")
-        {
-            can_score = board_score;
-            kimin_sırası = kimin_sırası + 1; kim_puan_aldı = kim_puan_aldı + 1;
-            if (kimin_sırası % 2 == 0) turn = "Player";
-            else turn = "Computer";
-            temp = n4; n4 = n6; n6 = n5; n5 = temp;
-        }
-        else if (hamle_numarası == "3")
-        {
-            can_score = board_score;
-            kimin_sırası = kimin_sırası + 1; kim_puan_aldı = kim_puan_aldı + 1;
-            if (kimin_sırası % 2 == 0) turn = "Player";
-            else turn = "Computer";
-            temp = n7; n7 = n9; n9 = n8; n8 = temp;
-        }
-        else if (hamle_numarası == "4")
-        {
-            can_score = board_score;
-            kimin_sırası = kimin_sırası + 1; kim_puan_aldı = kim_puan_aldı + 1;
-            if (kimin_sırası % 2 == 0) turn = "Player";
-            else turn = "Computer";
-            temp = n1; n1 = n7; n7 = n4; n4 = temp;
-        }
-        else if (hamle_numarası == "5")
-        {
-            can_score = board_score;
-            kimin_sırası = kimin_sırası + 1; kim_puan_aldı = kim_puan_aldı + 1;
-            if (kimin_sırası % 2 == 0) turn = "Player";
-            else turn = "Computer";
-            temp = n2; n2 = n8; n8 = n5; n5 = temp;
-        }
-        else if (hamle_numarası == "6")
-        {
-            can_score = board_score;
-            kimin_sırası = kimin_sırası + 1; kim_puan_aldı = kim_puan_aldı + 1;
-            if (kimin_sırası % 2 == 0) turn = "Player";
-            else turn = "Computer";
-            temp = n3; n3 = n9; n9 = n6; n6 = temp;
-        }
-        else
-        {
-            Console.WriteLine("invalid move number"); turn_number = turn_number - 1;
-            Console.WriteLine();
-        }
+        can_score = board_score;
+        kimin_sırası = kimin_sırası + 1; kim_puan_aldı = kim_puan_aldı + 1;
+        if (kimin_sırası % 2 == 0) turn = "Player";
+        else turn = "Computer";
+        
+            if (hamle_numarası == "1") { temp = n1; n1 = n3; n3 = n2; n2 = temp; }
+            else if (hamle_numarası == "2") { temp = n4; n4 = n6; n6 = n5; n5 = temp; }
+            else if (hamle_numarası == "3") { temp = n7; n7 = n9; n9 = n8; n8 = temp; }
+            else if (hamle_numarası == "4") { temp = n1; n1 = n7; n7 = n4; n4 = temp; }
+            else if (hamle_numarası == "5") { temp = n2; n2 = n8; n8 = n5; n5 = temp; }
+            else if (hamle_numarası == "6") { temp = n3; n3 = n9; n9 = n6; n6 = temp; }
+            else
+            {
+                Console.WriteLine("invalid move number"); turn_number = turn_number - 1;
+                Console.WriteLine();
+            }    
         {
             x1 = ((n1 + 2 == n2 + 1 && n2 + 1 == n3) | (n1 - 2 == n2 - 1 && n2 - 1 == n3));
             x2 = ((n4 + 2 == n5 + 1 && n5 + 1 == n6) | (n4 - 2 == n5 - 1 && n5 - 1 == n6));
