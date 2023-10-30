@@ -163,18 +163,20 @@ while (round < 6)
                 if (kimin_sırası % 2 == 0) turn = "Player";
                 else turn = "Computer";
                 turn_number = 0;
+                if (kim_puan_aldı % 2 == 1) whowon = "Player";
+                else whowon = "Computer";
 
+                Thread.Sleep(750); Console.WriteLine();
                 Console.WriteLine();
+                Console.WriteLine("             |------Round " + round + "------|"); Console.WriteLine();
                 Console.WriteLine();
-                Console.WriteLine("             |------Round " + round + "------|");
-                Console.WriteLine();
-                Console.WriteLine("             #####################");
+                Console.WriteLine("             #####################"+ "              " + whowon + " won " + board_score + " point!");
                 Console.WriteLine("             ##                 ##");
-                Console.WriteLine("             ##   " + n1 + "    " + n2 + "    " + n3 + "   ##");
-                Console.WriteLine("             ##                 ##");
-                Console.WriteLine("             ##   " + n4 + "    " + n5 + "    " + n6 + "   ##");
-                Console.WriteLine("             ##                 ##");
-                Console.WriteLine("             ##   " + n7 + "    " + n8 + "    " + n9 + "   ##");
+                Console.WriteLine("             ##   " + n1 + "    " + n2 + "    " + n3 + "   ##"+ "             *********************                  ");
+                Console.WriteLine("             ##                 ##"+ "             *                   *");
+                Console.WriteLine("             ##   " + n4 + "    " + n5 + "    " + n6 + "   ##"+ "             *    Round " + round + " End    *");
+                Console.WriteLine("             ##                 ##"+ "             *                   *");
+                Console.WriteLine("             ##   " + n7 + "    " + n8 + "    " + n9 + "   ##"+ "             *********************                  ");
                 Console.WriteLine("             ##                 ##");
                 Console.WriteLine("             #####################");
 
@@ -189,22 +191,10 @@ while (round < 6)
                 do n7 = random.Next(1, 10); while (n1 == n7 | n2 == n7 | n3 == n7 | n4 == n7 | n5 == n7 | n6 == n7);
                 do n8 = random.Next(1, 10); while (n1 == n8 | n2 == n8 | n3 == n8 | n4 == n8 | n5 == n8 | n6 == n8 | n7 == n8);
                 do n9 = random.Next(1, 10); while (n1 == n9 | n2 == n9 | n3 == n9 | n4 == n9 | n5 == n9 | n6 == n9 | n7 == n9 | n8 == n9);
-
-                if (kim_puan_aldı % 2 == 1) whowon = "Player";
-                else whowon = "Computer";
-
+            
                 if (kim_puan_aldı % 2 == 1) player_score = (player_score + board_score);
                 else computer_score = (computer_score + board_score);
-
-                Thread.Sleep(750);
-                Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
-                Console.WriteLine("              " + whowon + " won " + board_score + " point!"); Console.WriteLine();
-                Console.WriteLine("             *********************                  ");
-                Console.WriteLine("             *                   *");
-                Console.WriteLine("             *    Round " + round + " End    *");
-                Console.WriteLine("             *                   *");
-                Console.WriteLine("             *********************                  "); Console.WriteLine();
-
+           
                 x1 = ((n1 + 2 == n2 + 1 && n2 + 1 == n3) | (n1 - 2 == n2 - 1 && n2 - 1 == n3));
                 x2 = ((n4 + 2 == n5 + 1 && n5 + 1 == n6) | (n4 - 2 == n5 - 1 && n5 - 1 == n6));
                 x3 = ((n7 + 2 == n8 + 1 && n8 + 1 == n9) | (n7 - 2 == n8 - 1 && n8 - 1 == n9));
@@ -227,21 +217,17 @@ while (round < 6)
                     if (x6) points = points + 1;
                     if (x7) points = points + 1;
                     if (x8) points = points + 1; board_score = (points * points); can_score = board_score;
-            }
-            else Console.WriteLine();
+            }           
         }
-    }
-    else
-    {
-    }
+    }   
 }
 Console.WriteLine();
-Console.WriteLine("-----------------------------------------------------------------"); Console.WriteLine();
+Console.WriteLine("--------------------------------------------------------------------"); Console.WriteLine();
 Console.WriteLine("              ++++++++++++++++++++++"); Console.WriteLine();
 Console.WriteLine("               Player's Point   : " + player_score); Console.WriteLine();
 Console.WriteLine("               Computer's Point : " + computer_score); Console.WriteLine();
 Console.WriteLine("              ++++++++++++++++++++++"); Console.WriteLine();
-Console.WriteLine("-----------------------------------------------------------------"); Console.WriteLine();
+Console.WriteLine("--------------------------------------------------------------------"); Console.WriteLine();
 {
     if (computer_score > player_score) Console.WriteLine("                      Computer WON");
     else if (computer_score < player_score) Console.WriteLine("                      Player WON");
