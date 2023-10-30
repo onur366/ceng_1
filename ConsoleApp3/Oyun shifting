@@ -126,7 +126,7 @@ while (round < 6)
     else if (hamle_numarası == "6") { temp = n3; n3 = n9; n9 = n6; n6 = temp; }
     else
     {
-        Console.WriteLine("invalid move number");     turn_number = turn_number - 1;   kimin_sırası = kimin_sırası + 1;
+        Console.WriteLine("invalid move number");     turn_number = turn_number - 1;   kimin_sırası = kimin_sırası + 1; kim_puan_aldı = kim_puan_aldı + 1;
         if (kimin_sırası % 2 == 0) turn = "Player"; else turn = "Computer";
     } 
     x1 = ((n1 + 2 == n2 + 1 && n2 + 1 == n3) | (n1 - 2 == n2 - 1 && n2 - 1 == n3));   if (x1) points = points + 1;
