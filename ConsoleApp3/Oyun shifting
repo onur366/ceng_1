@@ -1,4 +1,4 @@
-int n1, n2, n3, n4, n5, n6, n7, n8, n9, round, turn_number, player_score, computer_score, temp; string turn = "Player"; string whowon;
+int n1, n2, n3, n4, n5, n6, n7, n8, n9, round, turn_number, player_score, computer_score, temp; string turn = "Player"; string who_won;
 turn_number = 0; round = 1; computer_score = 0; player_score = 0; int points; int board_score; int kimin_sırası = 0; int kim_puan_aldı = 0;
 int temp_for_board_reading_int; int Value = 0; n1 = 0; n2 = 0; n3 = 0; n4 = 0; n5 = 0; n6 = 0; n7 = 0; n8 = 0; n9 = 0;
 
@@ -159,14 +159,14 @@ while (round < 6)
         if (kimin_sırası % 2 == 0) turn = "Player";
         else turn = "Computer";
         turn_number = 0;
-        if (kim_puan_aldı % 2 == 1) whowon = "Player";
-        else whowon = "Computer";
+        if (kim_puan_aldı % 2 == 1) who_won = "Player";
+        else who_won = "Computer";
 
         Thread.Sleep(750); Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("             |------Round " + round + "------|"); Console.WriteLine();
         Console.WriteLine();
-        Console.WriteLine("             #####################" + "              " + whowon + " won " + board_score + " point!");
+        Console.WriteLine("             #####################" + "              " + who_won + " won " + board_score + " point!");
         Console.WriteLine("             ##                 ##");
         Console.WriteLine("             ##   " + n1 + "    " + n2 + "    " + n3 + "   ##" + "             *********************                  ");
         Console.WriteLine("             ##                 ##" + "             *                   *");
@@ -217,8 +217,7 @@ Console.WriteLine("                      Player's Point   : " + player_score); C
 Console.WriteLine("                      Computer's Point : " + computer_score); Console.WriteLine();
 Console.WriteLine("                     ++++++++++++++++++++++"); Console.WriteLine();
 Console.WriteLine("--------------------------------------------------------------------"); Console.WriteLine();
-{
+
     if (computer_score > player_score) Console.WriteLine("                         Computer WON");
     else if (computer_score < player_score) Console.WriteLine("                         Player WON");
     else Console.WriteLine("                         ENDED DRAW"); Console.WriteLine(""); Console.WriteLine();
-}
