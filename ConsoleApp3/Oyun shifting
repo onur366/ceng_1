@@ -99,26 +99,25 @@ while (round < 6)
 {
     turn_number = turn_number + 1;
 
+    Console.WriteLine(); Console.WriteLine();
+    Console.WriteLine("-----------------------------------------------------------------------------");
+    Console.WriteLine();
+    Console.WriteLine("             |------Round " + round + "------|");
+    Console.WriteLine();
+    Console.WriteLine("             #####################");
+    Console.WriteLine("             ##                 ##");
+    Console.WriteLine("             ##   " + n1 + "    " + n2 + "    " + n3 + "   ##      Turn:     " + turn_number + "      &      " + turn);
+    Console.WriteLine("             ##                 ##");
+    Console.WriteLine("             ##   " + n4 + "    " + n5 + "    " + n6 + "   ##      Player Score   : " + player_score);
+    Console.WriteLine("             ##                 ##");
+    Console.WriteLine("             ##   " + n7 + "    " + n8 + "    " + n9 + "   ##      Computer Score : " + computer_score);
+    Console.WriteLine("             ##                 ##");
+    Console.WriteLine("             #####################");
+    Console.WriteLine("                Board score : " + board_score);
+
     if (kimin_sırası % 2 == 1)
     {
-        can_score = board_score;  best_point = 0; whıch_move_is_best = 0;
-
-        Console.WriteLine(); Console.WriteLine();
-        Console.WriteLine("-----------------------------------------------------------------------------");
-        Console.WriteLine();
-        Console.WriteLine("             |------Round " + round + "------|");
-        Console.WriteLine();
-        Console.WriteLine("             #####################");
-        Console.WriteLine("             ##                 ##");
-        Console.WriteLine("             ##   " + n1 + "    " + n2 + "    " + n3 + "   ##      Turn:     " + turn_number + "      &      " + turn);
-        Console.WriteLine("             ##                 ##");
-        Console.WriteLine("             ##   " + n4 + "    " + n5 + "    " + n6 + "   ##      Player Score   : " + player_score);
-        Console.WriteLine("             ##                 ##");
-        Console.WriteLine("             ##   " + n7 + "    " + n8 + "    " + n9 + "   ##      Computer Score : " + computer_score);
-        Console.WriteLine("             ##                 ##");
-        Console.WriteLine("             #####################");
-        Console.WriteLine("                Board score : " + board_score);   Thread.Sleep(2500);
-
+        can_score = board_score;  best_point = 0; whıch_move_is_best = 0; Thread.Sleep(2500);
         for (int b = 1; b < 7; b++)
         {
             
@@ -175,22 +174,6 @@ while (round < 6)
     }
     else
     {
-        Console.WriteLine(); Console.WriteLine();
-        Console.WriteLine("-----------------------------------------------------------------------------");
-        Console.WriteLine();
-        Console.WriteLine("             |------Round " + round + "------|");
-        Console.WriteLine();
-        Console.WriteLine("             #####################");
-        Console.WriteLine("             ##                 ##");
-        Console.WriteLine("             ##   " + n1 + "    " + n2 + "    " + n3 + "   ##      Turn:     " + turn_number + "      &      " + turn);
-        Console.WriteLine("             ##                 ##");
-        Console.WriteLine("             ##   " + n4 + "    " + n5 + "    " + n6 + "   ##      Player Score   : " + player_score);
-        Console.WriteLine("             ##                 ##");
-        Console.WriteLine("             ##   " + n7 + "    " + n8 + "    " + n9 + "   ##      Computer Score : " + computer_score);
-        Console.WriteLine("             ##                 ##");
-        Console.WriteLine("             #####################");
-        Console.WriteLine("                Board score : " + board_score);
-
         Console.WriteLine(); Console.WriteLine("Please choose a move from 1 to 6");
         var hamle_numarası = (Console.ReadLine());
 
