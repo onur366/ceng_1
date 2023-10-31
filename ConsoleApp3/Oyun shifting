@@ -92,10 +92,8 @@ Console.WriteLine("             ##                 ##");
 Console.WriteLine("             #####################");
 Console.WriteLine("                Board score : " + board_score); Thread.Sleep(2500);
 
-
-int cn1, cn2, cn3, cn4, cn5, cn6, cn7, cn8, cn9; int reset1, reset2, reset3, reset4, reset5, reset6, reset7, reset8, reset9;
-int points2 ; int temp2, best_point, whıch_move_is_best, board_score2;
-
+int cn1, cn2, cn3, cn4, cn5, cn6, cn7, cn8, cn9; cn1 = n1; cn2 = n2; cn3 = n3; cn4 = n4; cn5 = n5; cn6 = n6; cn7 = n7; cn8 = n8; cn9 = n9;
+int points2 , temp2, best_point, whıch_move_is_best, board_score2;
 
 while (round < 6)
 {
@@ -121,19 +119,9 @@ while (round < 6)
         Console.WriteLine("             #####################");
         Console.WriteLine("                Board score : " + board_score);   Thread.Sleep(2500);
 
-        reset1 = n1; cn1 = n1;
-        reset2 = n2; cn2 = n2;
-        reset3 = n3; cn3 = n3;
-        reset4 = n4; cn4 = n4;
-        reset5 = n5; cn5 = n5;
-        reset6 = n6; cn6 = n6;
-        reset7 = n7; cn7 = n7;
-        reset8 = n8; cn8 = n8;
-        reset9 = n9; cn9 = n9;
-    
         for (int b = 1; b < 7; b++)
         {
-            cn1 = reset1; cn2 = reset2; cn3 = reset3; cn4 = reset4; cn5 = reset5; cn6 = reset6; cn7 = reset7; cn8 = reset8; cn9 = reset9;
+            
             if (b == 1) { temp2 = cn1; cn1 = cn3; cn3 = cn2; cn2 = temp2; }
             else if (b == 2) { temp2 = cn4; cn4 = cn6; cn6 = cn5; cn5 = temp2; }
             else if (b == 3) { temp2 = cn7; cn7 = cn9; cn9 = cn8; cn8 = temp2; }
