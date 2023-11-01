@@ -95,7 +95,7 @@ Console.WriteLine("                Board score : " + board_score); Thread.Sleep(
 while (round < 6)
 {
     int cn1, cn2, cn3, cn4, cn5, cn6, cn7, cn8, cn9; cn1 = n1; cn2 = n2; cn3 = n3; cn4 = n4; cn5 = n5; cn6 = n6; cn7 = n7; cn8 = n8; cn9 = n9;
-    int points2, temp2, best_point, whıch_move_is_best;
+    int points2, temp2, best_point, whıch_move_is_best, board_score2;
     turn_number = turn_number + 1;
 
     Console.WriteLine(); Console.WriteLine();
@@ -137,13 +137,14 @@ while (round < 6)
             bool cx7 = ((cn1 + 2 == cn5 + 1 && cn5 + 1 == cn9) | (cn1 - 2 == cn5 - 1 && cn5 - 1 == cn9)); if (cx7) points2 = points2 + 1;
             bool cx8 = ((cn3 + 2 == cn5 + 1 && cn5 + 1 == cn7) | (cn3 - 2 == cn5 - 1 && cn5 - 1 == cn7)); if (cx8) points2 = points2 + 1;
 
-            board_score = (points2 * points2);
-            if (board_score > best_point)
+            board_score2 = (points2 * points2);
+            if (board_score2 > best_point)
             {
-                best_point = board_score;
+                best_point = board_score2;
                 whıch_move_is_best = b;
             }
         }
+        board_score = best_point;
         if (can_score > 0)
         {
             whıch_move_is_best = random.Next(1, 7);
