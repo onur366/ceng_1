@@ -1,5 +1,5 @@
 int n1, n2, n3, n4, n5, n6, n7, n8, n9, round, turn_number, player_score, computer_score, temp; string turn = "Player"; string who_won; int can_score;
-turn_number = 0; round = 1; computer_score = 0; player_score = 0; int points=0; int board_score; int kimin_sırası = 0; int kim_puan_aldı = 0;
+turn_number = 0; round = 1; computer_score = 0; player_score = 0; int points = 0; int board_score; int kimin_sırası = 0; int kim_puan_aldı = 0;
 int temp_for_board_reading_int; int Value = 0; n1 = 0; n2 = 0; n3 = 0; n4 = 0; n5 = 0; n6 = 0; n7 = 0; n8 = 0; n9 = 0;
 Random random = new Random();
 
@@ -67,14 +67,14 @@ for (int Top = 6; Top <= 10; Top = Top + 2)
         else if (Value == 9) n9 = temp_for_board_reading_int;
     }
 }
-bool x1 = ((n1 + 2 == n2 + 1 && n2 + 1 == n3) | (n1 - 2 == n2 - 1 && n2 - 1 == n3));   if (x1) points = points + 1;
-bool x2 = ((n4 + 2 == n5 + 1 && n5 + 1 == n6) | (n4 - 2 == n5 - 1 && n5 - 1 == n6));   if (x2) points = points + 1;
-bool x3 = ((n7 + 2 == n8 + 1 && n8 + 1 == n9) | (n7 - 2 == n8 - 1 && n8 - 1 == n9));   if (x3) points = points + 1;
-bool x4 = ((n1 + 2 == n4 + 1 && n4 + 1 == n7) | (n1 - 2 == n4 - 1 && n4 - 1 == n7));   if (x4) points = points + 1;
-bool x5 = ((n2 + 2 == n5 + 1 && n5 + 1 == n8) | (n2 - 2 == n5 - 1 && n5 - 1 == n8));   if (x5) points = points + 1;
-bool x6 = ((n3 + 2 == n6 + 1 && n6 + 1 == n9) | (n3 - 2 == n6 - 1 && n6 - 1 == n9));   if (x6) points = points + 1;
-bool x7 = ((n1 + 2 == n5 + 1 && n5 + 1 == n9) | (n1 - 2 == n5 - 1 && n5 - 1 == n9));   if (x7) points = points + 1;
-bool x8 = ((n3 + 2 == n5 + 1 && n5 + 1 == n7) | (n3 - 2 == n5 - 1 && n5 - 1 == n7));   if (x8) points = points + 1;       board_score = (points * points);
+bool x1 = ((n1 + 2 == n2 + 1 && n2 + 1 == n3) | (n1 - 2 == n2 - 1 && n2 - 1 == n3)); if (x1) points = points + 1;
+bool x2 = ((n4 + 2 == n5 + 1 && n5 + 1 == n6) | (n4 - 2 == n5 - 1 && n5 - 1 == n6)); if (x2) points = points + 1;
+bool x3 = ((n7 + 2 == n8 + 1 && n8 + 1 == n9) | (n7 - 2 == n8 - 1 && n8 - 1 == n9)); if (x3) points = points + 1;
+bool x4 = ((n1 + 2 == n4 + 1 && n4 + 1 == n7) | (n1 - 2 == n4 - 1 && n4 - 1 == n7)); if (x4) points = points + 1;
+bool x5 = ((n2 + 2 == n5 + 1 && n5 + 1 == n8) | (n2 - 2 == n5 - 1 && n5 - 1 == n8)); if (x5) points = points + 1;
+bool x6 = ((n3 + 2 == n6 + 1 && n6 + 1 == n9) | (n3 - 2 == n6 - 1 && n6 - 1 == n9)); if (x6) points = points + 1;
+bool x7 = ((n1 + 2 == n5 + 1 && n5 + 1 == n9) | (n1 - 2 == n5 - 1 && n5 - 1 == n9)); if (x7) points = points + 1;
+bool x8 = ((n3 + 2 == n5 + 1 && n5 + 1 == n7) | (n3 - 2 == n5 - 1 && n5 - 1 == n7)); if (x8) points = points + 1; board_score = (points * points);
 
 Console.WriteLine(); Console.WriteLine();
 Console.WriteLine("-----------------------------------------------------------------------------");
@@ -92,11 +92,10 @@ Console.WriteLine("             ##                 ##");
 Console.WriteLine("             #####################");
 Console.WriteLine("                Board score : " + board_score); Thread.Sleep(2500);
 
-int cn1, cn2, cn3, cn4, cn5, cn6, cn7, cn8, cn9; cn1 = n1; cn2 = n2; cn3 = n3; cn4 = n4; cn5 = n5; cn6 = n6; cn7 = n7; cn8 = n8; cn9 = n9;
-int points2 , temp2, best_point, whıch_move_is_best, board_score2;
-
 while (round < 6)
 {
+    int cn1, cn2, cn3, cn4, cn5, cn6, cn7, cn8, cn9; cn1 = n1; cn2 = n2; cn3 = n3; cn4 = n4; cn5 = n5; cn6 = n6; cn7 = n7; cn8 = n8; cn9 = n9;
+    int points2, temp2, best_point, whıch_move_is_best;
     turn_number = turn_number + 1;
 
     Console.WriteLine(); Console.WriteLine();
@@ -117,10 +116,10 @@ while (round < 6)
 
     if (kimin_sırası % 2 == 1)
     {
-        can_score = board_score;  best_point = 0; whıch_move_is_best = 0; Thread.Sleep(2500);
+        can_score = board_score; best_point = 0; whıch_move_is_best = 0; Thread.Sleep(2500);
         for (int b = 1; b < 7; b++)
         {
-            
+
             if (b == 1) { temp2 = cn1; cn1 = cn3; cn3 = cn2; cn2 = temp2; }
             else if (b == 2) { temp2 = cn4; cn4 = cn6; cn6 = cn5; cn5 = temp2; }
             else if (b == 3) { temp2 = cn7; cn7 = cn9; cn9 = cn8; cn8 = temp2; }
@@ -138,17 +137,17 @@ while (round < 6)
             bool cx7 = ((cn1 + 2 == cn5 + 1 && cn5 + 1 == cn9) | (cn1 - 2 == cn5 - 1 && cn5 - 1 == cn9)); if (cx7) points2 = points2 + 1;
             bool cx8 = ((cn3 + 2 == cn5 + 1 && cn5 + 1 == cn7) | (cn3 - 2 == cn5 - 1 && cn5 - 1 == cn7)); if (cx8) points2 = points2 + 1;
 
-            board_score2 = (points2 * points2);         
-            if (board_score2 > best_point)
+            board_score = (points2 * points2);
+            if (board_score > best_point)
             {
-                best_point = board_score2;
+                best_point = board_score;
                 whıch_move_is_best = b;
             }
         }
-        if(can_score>0)
+        if (can_score > 0)
         {
             whıch_move_is_best = random.Next(1, 7);
-                 if (whıch_move_is_best == 1) { temp2 = n1; n1 = n3; n3 = n2; n2 = temp2; }
+            if (whıch_move_is_best == 1) { temp2 = n1; n1 = n3; n3 = n2; n2 = temp2; }
             else if (whıch_move_is_best == 2) { temp2 = n4; n4 = n6; n6 = n5; n5 = temp2; }
             else if (whıch_move_is_best == 3) { temp2 = n7; n7 = n9; n9 = n8; n8 = temp2; }
             else if (whıch_move_is_best == 4) { temp2 = n1; n1 = n7; n7 = n4; n4 = temp2; }
@@ -159,18 +158,18 @@ while (round < 6)
         {
             if (whıch_move_is_best == 0) { whıch_move_is_best = random.Next(1, 7); }
 
-                 if (whıch_move_is_best == 1) { temp2 = n1; n1 = n3; n3 = n2; n2 = temp2; }
+            if (whıch_move_is_best == 1) { temp2 = n1; n1 = n3; n3 = n2; n2 = temp2; }
             else if (whıch_move_is_best == 2) { temp2 = n4; n4 = n6; n6 = n5; n5 = temp2; }
             else if (whıch_move_is_best == 3) { temp2 = n7; n7 = n9; n9 = n8; n8 = temp2; }
             else if (whıch_move_is_best == 4) { temp2 = n1; n1 = n7; n7 = n4; n4 = temp2; }
             else if (whıch_move_is_best == 5) { temp2 = n2; n2 = n8; n8 = n5; n5 = temp2; }
             else if (whıch_move_is_best == 6) { temp2 = n3; n3 = n9; n9 = n6; n6 = temp2; }
-        }     
+        }
         Console.WriteLine(); Console.WriteLine(); Console.WriteLine("              Computer's move : " + whıch_move_is_best);
 
-         kimin_sırası = kimin_sırası + 1; kim_puan_aldı = kim_puan_aldı + 1;
-         if (kimin_sırası % 2 == 0) turn = "Player";
-         else turn = "Computer";
+        kimin_sırası = kimin_sırası + 1; kim_puan_aldı = kim_puan_aldı + 1;
+        if (kimin_sırası % 2 == 0) turn = "Player";
+        else turn = "Computer";
     }
     else
     {
@@ -194,17 +193,17 @@ while (round < 6)
             if (kimin_sırası % 2 == 0) turn = "Player"; else turn = "Computer";
         }
     }
-        points = 0;
-        x1 = ((n1 + 2 == n2 + 1 && n2 + 1 == n3) | (n1 - 2 == n2 - 1 && n2 - 1 == n3)); if (x1) points = points + 1;
-        x2 = ((n4 + 2 == n5 + 1 && n5 + 1 == n6) | (n4 - 2 == n5 - 1 && n5 - 1 == n6)); if (x2) points = points + 1;
-        x3 = ((n7 + 2 == n8 + 1 && n8 + 1 == n9) | (n7 - 2 == n8 - 1 && n8 - 1 == n9)); if (x3) points = points + 1;
-        x4 = ((n1 + 2 == n4 + 1 && n4 + 1 == n7) | (n1 - 2 == n4 - 1 && n4 - 1 == n7)); if (x4) points = points + 1;
-        x5 = ((n2 + 2 == n5 + 1 && n5 + 1 == n8) | (n2 - 2 == n5 - 1 && n5 - 1 == n8)); if (x5) points = points + 1;
-        x6 = ((n3 + 2 == n6 + 1 && n6 + 1 == n9) | (n3 - 2 == n6 - 1 && n6 - 1 == n9)); if (x6) points = points + 1;
-        x7 = ((n1 + 2 == n5 + 1 && n5 + 1 == n9) | (n1 - 2 == n5 - 1 && n5 - 1 == n9)); if (x7) points = points + 1;
-        x8 = ((n3 + 2 == n5 + 1 && n5 + 1 == n7) | (n3 - 2 == n5 - 1 && n5 - 1 == n7)); if (x8) points = points + 1; board_score = (points * points);
-    
-    if ((board_score > 0)&& (can_score == 0))
+    points = 0;
+    x1 = ((n1 + 2 == n2 + 1 && n2 + 1 == n3) | (n1 - 2 == n2 - 1 && n2 - 1 == n3)); if (x1) points = points + 1;
+    x2 = ((n4 + 2 == n5 + 1 && n5 + 1 == n6) | (n4 - 2 == n5 - 1 && n5 - 1 == n6)); if (x2) points = points + 1;
+    x3 = ((n7 + 2 == n8 + 1 && n8 + 1 == n9) | (n7 - 2 == n8 - 1 && n8 - 1 == n9)); if (x3) points = points + 1;
+    x4 = ((n1 + 2 == n4 + 1 && n4 + 1 == n7) | (n1 - 2 == n4 - 1 && n4 - 1 == n7)); if (x4) points = points + 1;
+    x5 = ((n2 + 2 == n5 + 1 && n5 + 1 == n8) | (n2 - 2 == n5 - 1 && n5 - 1 == n8)); if (x5) points = points + 1;
+    x6 = ((n3 + 2 == n6 + 1 && n6 + 1 == n9) | (n3 - 2 == n6 - 1 && n6 - 1 == n9)); if (x6) points = points + 1;
+    x7 = ((n1 + 2 == n5 + 1 && n5 + 1 == n9) | (n1 - 2 == n5 - 1 && n5 - 1 == n9)); if (x7) points = points + 1;
+    x8 = ((n3 + 2 == n5 + 1 && n5 + 1 == n7) | (n3 - 2 == n5 - 1 && n5 - 1 == n7)); if (x8) points = points + 1; board_score = (points * points);
+
+    if ((board_score > 0) && (can_score == 0))
     {
         if (kimin_sırası % 2 == 1) kimin_sırası = kimin_sırası + 1;
         if (kimin_sırası % 2 == 0) turn = "Player";
@@ -242,14 +241,14 @@ while (round < 6)
         if (kim_puan_aldı % 2 == 1) player_score = (player_score + board_score);
         else computer_score = (computer_score + board_score);
 
-        x1 = ((n1 + 2 == n2 + 1 && n2 + 1 == n3) | (n1 - 2 == n2 - 1 && n2 - 1 == n3));   if (x1) points = points + 1;
-        x2 = ((n4 + 2 == n5 + 1 && n5 + 1 == n6) | (n4 - 2 == n5 - 1 && n5 - 1 == n6));   if (x2) points = points + 1;
-        x3 = ((n7 + 2 == n8 + 1 && n8 + 1 == n9) | (n7 - 2 == n8 - 1 && n8 - 1 == n9));   if (x3) points = points + 1;
-        x4 = ((n1 + 2 == n4 + 1 && n4 + 1 == n7) | (n1 - 2 == n4 - 1 && n4 - 1 == n7));   if (x4) points = points + 1;
-        x5 = ((n2 + 2 == n5 + 1 && n5 + 1 == n8) | (n2 - 2 == n5 - 1 && n5 - 1 == n8));   if (x5) points = points + 1;
-        x6 = ((n3 + 2 == n6 + 1 && n6 + 1 == n9) | (n3 - 2 == n6 - 1 && n6 - 1 == n9));   if (x6) points = points + 1;
-        x7 = ((n1 + 2 == n5 + 1 && n5 + 1 == n9) | (n1 - 2 == n5 - 1 && n5 - 1 == n9));   if (x7) points = points + 1;
-        x8 = ((n3 + 2 == n5 + 1 && n5 + 1 == n7) | (n3 - 2 == n5 - 1 && n5 - 1 == n7));   if (x8) points = points + 1;      board_score = (points * points); kim_puan_aldı = 0;
+        x1 = ((n1 + 2 == n2 + 1 && n2 + 1 == n3) | (n1 - 2 == n2 - 1 && n2 - 1 == n3)); if (x1) points = points + 1;
+        x2 = ((n4 + 2 == n5 + 1 && n5 + 1 == n6) | (n4 - 2 == n5 - 1 && n5 - 1 == n6)); if (x2) points = points + 1;
+        x3 = ((n7 + 2 == n8 + 1 && n8 + 1 == n9) | (n7 - 2 == n8 - 1 && n8 - 1 == n9)); if (x3) points = points + 1;
+        x4 = ((n1 + 2 == n4 + 1 && n4 + 1 == n7) | (n1 - 2 == n4 - 1 && n4 - 1 == n7)); if (x4) points = points + 1;
+        x5 = ((n2 + 2 == n5 + 1 && n5 + 1 == n8) | (n2 - 2 == n5 - 1 && n5 - 1 == n8)); if (x5) points = points + 1;
+        x6 = ((n3 + 2 == n6 + 1 && n6 + 1 == n9) | (n3 - 2 == n6 - 1 && n6 - 1 == n9)); if (x6) points = points + 1;
+        x7 = ((n1 + 2 == n5 + 1 && n5 + 1 == n9) | (n1 - 2 == n5 - 1 && n5 - 1 == n9)); if (x7) points = points + 1;
+        x8 = ((n3 + 2 == n5 + 1 && n5 + 1 == n7) | (n3 - 2 == n5 - 1 && n5 - 1 == n7)); if (x8) points = points + 1; board_score = (points * points); kim_puan_aldı = 0;
     }
 }
 Console.WriteLine();
