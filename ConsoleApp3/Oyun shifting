@@ -144,10 +144,10 @@ while (round < 6)
                 whıch_move_is_best = b;
             }
         }
-        board_score = best_point;
-        if (can_score > 0)
+        if (can_score == 0)
         {
-            whıch_move_is_best = random.Next(1, 7);
+            if (whıch_move_is_best == 0) { whıch_move_is_best = random.Next(1, 7); }
+
             if (whıch_move_is_best == 1) { temp2 = n1; n1 = n3; n3 = n2; n2 = temp2; }
             else if (whıch_move_is_best == 2) { temp2 = n4; n4 = n6; n6 = n5; n5 = temp2; }
             else if (whıch_move_is_best == 3) { temp2 = n7; n7 = n9; n9 = n8; n8 = temp2; }
@@ -156,9 +156,8 @@ while (round < 6)
             else if (whıch_move_is_best == 6) { temp2 = n3; n3 = n9; n9 = n6; n6 = temp2; }
         }
         else
-        {
-            if (whıch_move_is_best == 0) { whıch_move_is_best = random.Next(1, 7); }
-
+        {         
+            whıch_move_is_best = random.Next(1, 7);
             if (whıch_move_is_best == 1) { temp2 = n1; n1 = n3; n3 = n2; n2 = temp2; }
             else if (whıch_move_is_best == 2) { temp2 = n4; n4 = n6; n6 = n5; n5 = temp2; }
             else if (whıch_move_is_best == 3) { temp2 = n7; n7 = n9; n9 = n8; n8 = temp2; }
