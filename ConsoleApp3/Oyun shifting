@@ -21,7 +21,7 @@ for (int Top = 6; Top <= 10; Top = Top + 2)
         while (true)
         {
             Console.SetCursorPosition(Left, Top);
-            var temp_for_board_reading = Console.ReadLine();
+            string temp_for_board_reading = Console.ReadLine();
             if (!(temp_for_board_reading == "1" || temp_for_board_reading == "2" || temp_for_board_reading == "3" ||
                   temp_for_board_reading == "4" || temp_for_board_reading == "5" || temp_for_board_reading == "6" ||
                   temp_for_board_reading == "7" || temp_for_board_reading == "8" || temp_for_board_reading == "9"))
@@ -90,10 +90,10 @@ Console.WriteLine("             ##                 ##");
 Console.WriteLine("             ##   " + n7 + "    " + n8 + "    " + n9 + "   ##      Computer Score : " + computer_score);
 Console.WriteLine("             ##                 ##");
 Console.WriteLine("             #####################");
-Console.WriteLine("                Board score : " + board_score); Thread.Sleep(2500);
+Console.WriteLine("                Board score : " + board_score); Thread.Sleep(2000);
 
 while (round < 6)
-{  
+{
     int points2, temp2, best_point, whıch_move_is_best, board_score2;
     turn_number = turn_number + 1;
 
@@ -115,7 +115,7 @@ while (round < 6)
 
     if (kimin_sırası % 2 == 1)
     {
-        can_score = board_score; best_point = 0; whıch_move_is_best = 0; Thread.Sleep(2500);
+        can_score = board_score; best_point = 0; whıch_move_is_best = 0; Thread.Sleep(1500);
         for (int b = 1; b < 7; b++)
         {
             int cn1, cn2, cn3, cn4, cn5, cn6, cn7, cn8, cn9; cn1 = n1; cn2 = n2; cn3 = n3; cn4 = n4; cn5 = n5; cn6 = n6; cn7 = n7; cn8 = n8; cn9 = n9;
@@ -173,7 +173,7 @@ while (round < 6)
     else
     {
         Console.WriteLine(); Console.WriteLine("Please choose a move from 1 to 6");
-        var hamle_numarası = (Console.ReadLine());
+        string hamle_numarası = (Console.ReadLine());
 
         can_score = board_score;
         kimin_sırası = kimin_sırası + 1; kim_puan_aldı = kim_puan_aldı + 1;
@@ -261,3 +261,8 @@ Console.WriteLine("-------------------------------------------------------------
 if (computer_score > player_score) Console.WriteLine("                         Computer WON");
 else if (computer_score < player_score) Console.WriteLine("                         Player WON");
 else Console.WriteLine("                         ENDED DRAW"); Console.WriteLine(""); Console.WriteLine();
+
+string exit;
+Console.WriteLine("Press 'x' to exit the game !!");Console.WriteLine();
+do exit = Console.ReadLine();
+while (exit != "x");
